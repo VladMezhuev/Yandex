@@ -1,0 +1,111 @@
+.work {
+  margin-top: 72px;
+  @media (min-width: 768px) {
+    margin-top: 88px;
+  }
+  @media (min-width: 1200px) {
+    padding: 0 70px;
+    margin-top: 140px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(241, 241, 241, 0.6) 100%
+    );
+    opacity: 0.8;
+    backdrop-filter: blur(12px);
+    border-radius: 40px;
+    padding: 20px;
+
+    @media (min-width: 768px) {
+      padding-left: 90px;
+    }
+
+    @media (min-width: 1200px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__left-side {
+    @media (min-width: 768px) {
+      padding-right: 430px;
+    }
+    @media (min-width: 1200px) {
+      padding-right: 220px;
+      flex: 0 1 40%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 20px;
+    }
+    @media (min-width: 1200px) {
+      padding-top: 55px;
+      margin-bottom: 45px;
+    }
+  }
+
+  &__description {
+    padding-bottom: 45px;
+  }
+
+  &__btn {
+    margin-bottom: 32px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__right-side {
+    @media (min-width: 768px) {
+      padding-right: 260px;
+    }
+    @media (min-width: 1200px) {
+      flex: 0 1 60%;
+    }
+  }
+
+  &__list {
+    counter-reset: myCounter;
+  }
+
+  &__elem {
+    list-style: none;
+    position: relative;
+    padding-left: 40px;
+    padding-right: 20px;
+    border-left: 1px solid #cccccc;
+
+    &:last-child {
+      border: none;
+    }
+
+    &::before {
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      color: var(--color-dark);
+      background-color: var(--color-white);
+      position: absolute;
+      top: 0;
+      left: -18px;
+      display: inline-block;
+      text-align: center;
+      border: 2px solid var(--color-violet);
+      padding: 8px 12px;
+      border-radius: 50%;
+      z-index: 4;
+    }
+  }
+
+  &__elem-title {
+    margin-bottom: 12px;
+  }
+}

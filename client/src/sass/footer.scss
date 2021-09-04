@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 108px;
+  background: radial-gradient(
+    100.78% 106.26% at 33.46% 18.73%,
+    rgba(7, 7, 7, 0.8) 0%,
+    rgba(77, 77, 77, 0.8) 100%
+  );
+  backdrop-filter: blur(12px);
+
+  margin-top: 21px;
+
+  @media (min-width: 768px) {
+    margin-top: 410px;
+  }
+  @media (min-width: 1366px) {
+    margin-top: 194px;
+  }
+
+  &__text {
+    color: var(--color-white);
+    letter-spacing: normal;
+  }
+}

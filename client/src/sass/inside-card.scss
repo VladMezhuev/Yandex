@@ -1,0 +1,116 @@
+.inside-card {
+  margin-top: 40px;
+
+  @media (min-width: 768px) {
+    padding: 0 12px;
+  }
+  @media (min-width: 1366px) {
+    padding: 0 52px;
+  }
+
+  &__wrapper {
+    background: radial-gradient(
+      100.78% 106.26% at 33.46% 18.73%,
+      rgba(23, 23, 94, 0.8) 0%,
+      rgba(94, 58, 144, 0.8) 100%
+    );
+    box-shadow: 0px 24px 40px rgba(59, 50, 135, 0.25);
+    backdrop-filter: blur(12px);
+    border-radius: 40px;
+    padding: 32px 24px;
+    color: var(--color-white);
+
+    @media (min-width: 768px) {
+      padding: 48px 75px 35px;
+    }
+    @media (min-width: 1366px) {
+      padding: 45px 60px 50px;
+    }
+  }
+  &__title {
+    margin-bottom: 24px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 30px;
+    }
+    @media (min-width: 1366px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__description {
+    width: 226px;
+    margin-bottom: 25px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 37px;
+    }
+    @media (min-width: 1366px) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 25px;
+
+    padding-left: 25px;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      width: 30%;
+
+      // Я этого не хотел, но против дизайнерского решения все переставить местами не пойдешь
+      &:nth-child(1) {
+        order: 1;
+      }
+      &:nth-child(2) {
+        order: 2;
+      }
+      &:nth-child(3) {
+        order: 4;
+      }
+      &:nth-child(4) {
+        order: 6;
+      }
+      &:nth-child(5) {
+        order: 5;
+      }
+      &:nth-child(6) {
+        order: 3;
+      }
+    }
+
+    @media (min-width: 1366px) {
+      font-size: var(--fz-size-xs);
+      padding-left: 40px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list-style {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    font-size: 15px;
+
+    @media (min-width: 1366px) {
+      font-size: 20px;
+    }
+  }
+}

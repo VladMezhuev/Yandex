@@ -1,0 +1,82 @@
+.img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--fz-size-xs);
+  line-height: 110%;
+  letter-spacing: -1px;
+
+  &--main {
+    @media (min-width: 768px) {
+      font-size: var(--fz-size-xl);
+    }
+  }
+
+  &--lg {
+    font-size: var(--fz-size-lg);
+  }
+
+  &--xl {
+    font-size: var(--fz-size-lg);
+    font-weight: 700;
+
+    @media (min-width: 1200px) {
+      font-size: var(--fz-size-xl);
+    }
+  }
+}
+
+.text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: -1%;
+
+  &--lg {
+    color: var(--color-dark);
+
+    @media (min-width: 768px) {
+      font-size: var(--fz-size-lg);
+    }
+  }
+
+  &--xl {
+    color: var(--color-violet);
+
+    @media (min-width: 1200px) {
+      font-size: var(--fz-size-xl);
+    }
+  }
+}
+
+.btn {
+  display: inline-flex;
+  width: 204px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-yellow);
+  color: var(--color-dark);
+  border-radius: 5px;
+  font-size: var(--fz-size-sm);
+  transition: all 0.3s ease;
+  font-weight: 700;
+  text-align: center;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: var(--color-white);
+      border: 1px solid var(--color-yellow);
+    }
+  }
+}

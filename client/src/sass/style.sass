@@ -1,0 +1,55 @@
+
+// ПЕРЕМЕННЫЕ================================================================================
+
+@import "variables"
+@import "node_modules/slick-carousel/slick/slick.scss"
+// ПЕРЕМЕННЫЕ================================================================================
+
+// ОБНУЛЕНИЕ И ОБЩИЕ ПАРАМЕТРЫ===============================================================
+@import "null"
+
+body
+   font-family: Montserrat sans-serif
+   font-size: var(--fz-size-sm)
+   background-color: var(--color-white)
+   &.disabled
+      overflow: hidden
+
+// ОБНУЛЕНИЕ И ОБЩИЕ ПАРАМЕТРЫ===============================================================
+
+// ОСНОВНАЯ СЕТКА============================================================================
+.container
+   max-width: var(--container-width)
+   margin: 0 auto
+   padding: 0 15px
+   @media (min-width: 576px)
+      --container-width: var(--mq-size-sm)
+
+   @media (min-width: 768px)
+      --container-width: var(--mq-size-md)
+
+   @media (min-width: 992px)
+      --container-width: var(--mq-size-lg)
+
+   @media (min-width: 1366px)
+      --container-width: var(--mq-size-xl)
+
+// ОСНОВНАЯ СЕТКА============================================================================
+
+// СТРАНИЦЫ И ЭЛЕМЕНТЫ=======================================================================
+@import "ui"
+
+@import "header"
+@import "home"
+@import "for-whom"
+@import "inside-card"
+@import "additional-block"
+@import "work"
+@import "map"
+@import "price"
+@import "about-us"
+@import "questions"
+@import "footer"
+// @import "main";
+// @import "footer";
+// СТРАНИЦЫ И ЭЛЕМЕНТЫ=======================================================================
